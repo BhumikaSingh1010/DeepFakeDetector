@@ -46,7 +46,7 @@ DeepFakeDetector/
 
 ## 🚀 Live Demo
 
-[https://deep-fake-detector-ai.streamlit.app/]
+[Open the DeepFake Detector](https://deep-fake-detector-ai.streamlit.app/)
 
 ## ⚠️ Prototype Limitation
 
