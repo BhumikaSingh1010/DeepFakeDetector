@@ -1,0 +1,9 @@
+streamlit
+numpy
+pandas
+scikit-learn
+matplotlib
+opencv-python-headless
+librosa
+soundfile
+joblib
