@@ -2,16 +2,21 @@
 
 An AI-powered prototype for detecting potentially manipulated audio and video using machine learning and digital media fingerprinting.
 
-## Features
+
+## 🚀 Live Demo
+[🔗 Click Here to Open the DeepFake Detector](https://deep-fake-detector-ai.streamlit.app/)
+
+## ✨ Features
 
 - 🎵 Audio DeepFake Detection
 - 🎬 Video DeepFake Detection
 - 🤖 Random Forest Machine Learning
 - 🔐 SHA-256 Digital Fingerprinting
-- 📊 Confidence-based prediction
+- 📊 Confidence-based Prediction
 - 🌐 Streamlit Web Interface
+- 🔬 Audio and Video Feature Analysis
 
-## Technology Stack
+## 🧰 Technology Stack
 
 - Python
 - Streamlit
@@ -20,49 +25,63 @@ An AI-powered prototype for detecting potentially manipulated audio and video us
 - OpenCV
 - NumPy
 - Pandas
+- Joblib
 - SHA-256
 
-## How It Works
+## ⚙️ How It Works
 
-1. Upload an audio or video file.
-2. Extract relevant media features.
-3. Analyze the features using a trained Random Forest model.
-4. Generate a SHA-256 digital fingerprint.
-5. Display the detection result and confidence.
+1. User uploads an audio or video file.
+2. Relevant audio or visual features are extracted.
+3. The extracted features are analyzed using a trained Random Forest model.
+4. A SHA-256 digital fingerprint is generated for the uploaded file.
+5. The system displays the prediction and confidence score.
 
-## Project Structure
+## 🎵 Audio Detection
+
+The audio detector extracts:
+
+- MFCC
+- Spectral Centroid
+- Spectral Bandwidth
+- Zero Crossing Rate
+
+These features are analyzed using a trained Random Forest classifier.
+
+## 🎬 Video Detection
+
+The video detector analyzes:
+
+- Mean Intensity
+- Standard Deviation
+- Edge Density
+
+These features are passed to a trained Random Forest classifier.
+
+## 🔐 Digital Media Fingerprinting
+
+SHA-256 hashing is used to generate a unique digital fingerprint for the uploaded media file.
+
+The fingerprint can help verify whether the exact uploaded file has changed.
+
+## 📂 Project Structure
 
 ```text
 DeepFakeDetector/
+│
 ├── app.py
 ├── home.py
 ├── audio_detector.py
 ├── video_detector.py
 ├── fingerprint.py
 ├── requirements.txt
+│
 ├── .streamlit/
+│   └── config.toml
+│
 ├── models/
+│   ├── audio_model.pkl
+│   └── video_model.pkl
+│
 └── pages/
-
-[🔗 Live Demo](https://deep-fake-detector-ai.streamlit.app)
-
-
-## ⚠️ Prototype Limitation
-
-This project is a research and demonstration prototype. The current video detector uses basic visual features such as mean intensity, standard deviation, and edge density. Detection results should not be treated as definitive proof of whether media is authentic or manipulated.
-
-## 🔮 Future Scope
-
-- Advanced CNN and Transformer-based detection
-- Face-level manipulation detection
-- Temporal frame analysis
-- Lip-sync and audio-video consistency checking
-- Larger and more diverse datasets
-- Explainable AI visualizations
-- Database-based detection history
-
-## 👩‍💻 Project
-
-**AI-Powered DeepFake Detection Using Digital Media Fingerprinting**
-
-Built using Python, Streamlit, Machine Learning, and SHA-256 Digital Fingerprinting.
+    ├── 2_Detection.py
+    └── 3_About.py
